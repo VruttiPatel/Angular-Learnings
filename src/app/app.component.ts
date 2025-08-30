@@ -8,5 +8,20 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Angular-Learning';
+
+  val:number = 0;
+ increment(){
+  this.val++;
+ }
+ reset(){
+  this.val=0;
+ }
+ decrement(){
+  if(this.val<=0){
+    this.val=0;
+  }
+  else{
+  this.val--;
+  }
+ }
 }

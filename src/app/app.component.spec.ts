@@ -14,11 +14,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Angular-Learning' title`, () => {
+  /* it(`should have the 'Angular-Learning' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('Angular-Learning');
-  });
+  }); */
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
