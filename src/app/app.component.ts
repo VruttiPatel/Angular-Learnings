@@ -8,20 +8,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  eventLog: String = "";
+  handleEvent(event: any) {
+    this.eventLog = event.type;
+  }
 
-  val: number = 0;
-  increment() {
-    this.val++;
-  }
-  reset() {
-    this.val = 0;
-  }
-  decrement() {
-    if (this.val <= 0) {
-      this.val = 0;
-    }
-    else {
-      this.val--;
-    }
+  inputEvent(event: any) {
+    this.eventLog = (event.target as HTMLInputElement).value;
   }
 }

@@ -1,8 +1,10 @@
-<h1 style="text-align: center;">Counter App</h1>
+<h1 style="text-align: center;">Events</h1>
 <br>
-<div style="text-align: center;">{{val}}</div>
+<div style="text-align: center;">Performing any action on UI is called Event</div>
 <br>
-<div style="text-align: center;">
-<button (click)="increment()">Increment</button>
-<button (click)="reset()">Reset</button>
-<button (click)="decrement()">Decrement</button></div>
+<div style="text-align: center;">{{eventLog}}</div>
+<div style="display: flex;gap: 20px;justify-content: center;">
+    <div style="text-align: center;width:auto;background-color: red;color: white;height: auto;"
+        (click)="handleEvent($event)">Click Event</div>
+    <input type="text" (input)="inputEvent($event)" placeholder="Input Event">
+</div>
