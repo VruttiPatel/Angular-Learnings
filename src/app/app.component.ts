@@ -8,12 +8,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  eventLog: String = "";
-  handleEvent(event: any) {
-    this.eventLog = event.type;
-  }
+  value: String = "";
 
   inputEvent(event: any) {
-    this.eventLog = (event.target as HTMLInputElement).value;
+    this.value = (event.target as HTMLInputElement).value;
   }
 }
