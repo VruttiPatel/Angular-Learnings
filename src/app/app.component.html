@@ -1,7 +1,8 @@
-<h1 style="text-align: center;">Get and Set value</h1>
+<h1 style="text-align: center;">Get and Set value using Template Reference Variable</h1>
 <br>
 <div style="text-align: center;">Name : {{value}}</div>
 <br>
 <div style="text-align: center;">
-    <input type="text" (input)="inputEvent($event)" placeholder="Your Name">
+    <input type="text" placeholder="Your Name" #name>
+    <button (click)="setValue(name.value)">Set Value</button>
 </div>

@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   value: String = "";
 
-  inputEvent(event: any) {
-    this.value = (event.target as HTMLInputElement).value;
+  setValue(name: String) {
+    this.value = name;
   }
 }
