@@ -1,12 +1,11 @@
-<h1 style="text-align: center;">Styles in Angular</h1>
+<h1 style="text-align: center;">If else in Angular</h1>
 <br>
-<p style="text-align: center;">1. If defined two scss in angular.json then the last one will be having higher priority.
-</p>
-<p style="text-align: center;">2. All the imported scss files in ts will be applicable to the component.</p>
-<br>
-<div style="text-align: center;">Name : {{value}}</div>
-<br>
+@if(show){
 <div style="text-align: center;">
-    <input type="text" placeholder="Your Name" #name>
-    <button (click)="setValue(name.value)">Set Value</button>
+    <p>It is visible because If condition is true.</p>
+</div>}
+@else{
+<div style="text-align: center;">
+    <p>It is not visible because If condition is false.</p>
 </div>
+}

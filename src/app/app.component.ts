@@ -8,9 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['app.component.scss', 'common.component.scss']
 })
 export class AppComponent {
-  value: String = "";
-
-  setValue(name: String) {
-    this.value = name;
-  }
+  show: boolean = true;
 }
