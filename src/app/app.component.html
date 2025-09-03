@@ -1,11 +1,19 @@
-<h1 style="text-align: center;">If else in Angular</h1>
+<h1 style="text-align: center;">If else If in Angular</h1>
 <br>
-@if(show){
-<div style="text-align: center;">
-    <p>It is visible because If condition is true.</p>
-</div>}
-@else{
-<div style="text-align: center;">
-    <p>It is not visible because If condition is false.</p>
+<div style="text-align: center;display: flex;justify-content: center;align-items: center;gap: 5px;">
+    <button (click)="setColor('red')">Red</button>
+    <button (click)="setColor('blue')">Blue</button>
+    <button (click)="setColor('yellow')">Yellow</button>
 </div>
+<br>
+<br>
+
+@if(color === 'red'){
+<div style="background-color: red;width: 100px;height: 100px;margin: 20px auto;"></div>
+}
+@else if(color === 'blue'){
+<div style="background-color: blue;width: 100px;height: 100px;margin: 20px auto;"></div>
+}
+@else{
+<div style="background-color: yellow;width: 100px;height: 100px;margin: 20px auto;"></div>
 }

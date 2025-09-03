@@ -8,5 +8,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['app.component.scss', 'common.component.scss']
 })
 export class AppComponent {
-  show: boolean = true;
+  color: String = 'black';
+
+  setColor(colorVal: String) {
+    this.color = colorVal;
+  }
 }
