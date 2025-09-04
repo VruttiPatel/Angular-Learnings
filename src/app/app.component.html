@@ -1,25 +1,14 @@
-<h1 style="text-align: center;">Switch Case in Angular</h1>
+<h1 style="text-align: center;">For loop in Angular</h1>
 <br>
-<div style="text-align: center;display: flex;justify-content: center;align-items: center;gap: 5px;">
-    <button (click)="setColor('red')">Red</button>
-    <button (click)="setColor('blue')">Blue</button>
-    <button (click)="setColor('yellow')">Yellow</button>
-    <button (click)="setColor('other')">Other</button>
+<div style="text-align: center;">
+    <h4>Car List</h4>
+    @for(car of cars; track car){
+    <div>{{car}}</div>
+    }
 </div>
-<br>
-<br>
-
-@switch(color){
-@case('red'){
-<div style="background-color: red;width: 100px;height: 100px;margin: 20px auto;"></div>
-}
-@case('blue'){
-<div style="background-color: blue;width: 100px;height: 100px;margin: 20px auto;"></div>
-}
-@case('yellow'){
-<div style="background-color: yellow;width: 100px;height: 100px;margin: 20px auto;"></div>
-}
-@default{
-<div style="background-color: black;width: 100px;height: 100px;margin: 20px auto;"></div>
-}
-}
+<div style="text-align: center;">
+    <h4>Student List</h4>
+    @for(student of students; track student.name; let id=$index){
+    <div>{{id+1}}, {{student.name}}, {{student.branch}}</div>
+    }
+</div>

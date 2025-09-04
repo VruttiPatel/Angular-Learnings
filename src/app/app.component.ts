@@ -8,9 +8,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['app.component.scss', 'common.component.scss']
 })
 export class AppComponent {
-  color: String = 'black';
-
-  setColor(colorVal: String) {
-    this.color = colorVal;
-  }
+  cars = ['Eeco', 'Kia', 'Audi', 'Safari', 'Lamborgini'];
+  students = [{ "name": "Vrutti", "branch": "IT" },
+  { "name": "Janvi", "branch": "CE" }
+  ];
 }
