@@ -1,19 +1,25 @@
-<h1 style="text-align: center;">If else If in Angular</h1>
+<h1 style="text-align: center;">Switch Case in Angular</h1>
 <br>
 <div style="text-align: center;display: flex;justify-content: center;align-items: center;gap: 5px;">
     <button (click)="setColor('red')">Red</button>
     <button (click)="setColor('blue')">Blue</button>
     <button (click)="setColor('yellow')">Yellow</button>
+    <button (click)="setColor('other')">Other</button>
 </div>
 <br>
 <br>
 
-@if(color === 'red'){
+@switch(color){
+@case('red'){
 <div style="background-color: red;width: 100px;height: 100px;margin: 20px auto;"></div>
 }
-@else if(color === 'blue'){
+@case('blue'){
 <div style="background-color: blue;width: 100px;height: 100px;margin: 20px auto;"></div>
 }
-@else{
+@case('yellow'){
 <div style="background-color: yellow;width: 100px;height: 100px;margin: 20px auto;"></div>
+}
+@default{
+<div style="background-color: black;width: 100px;height: 100px;margin: 20px auto;"></div>
+}
 }
