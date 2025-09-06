@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,8 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['app.component.scss', 'common.component.scss']
 })
 export class AppComponent {
-  cars = ['Eeco', 'Kia', 'Audi', 'Safari', 'Lamborgini'];
-  students = [{ "name": "Vrutti", "branch": "IT" },
-  { "name": "Janvi", "branch": "CE" }
-  ];
+  name = signal("Vrutti");
 }
