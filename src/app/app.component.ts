@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,5 +8,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['app.component.scss', 'common.component.scss']
 })
 export class AppComponent {
-  name = signal("Vrutti");
+  writableSignalValue: WritableSignal<number> = signal(100);
+  computedSignalValue = computed(() => 200);
+
+  updateWritableSignal() {
+    this.writableSignalValue.set(this.writableSignalValue() + 1);
+  }
+
+  updateComputedSignal() {
+    this.computedSignalValue;
+    //this.computedSignalValue.set(this.computedSignalValue()+1); - Computed signals are constant so not having set method
+  }
 }

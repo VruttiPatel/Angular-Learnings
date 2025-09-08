@@ -1,3 +1,7 @@
-<h1 style="text-align: center;">Signal in Angular</h1>
-<p style="text-align: center;">Wrapper around a value</p>
-<h5 style="text-align: center;">Signal value is : {{name()}}</h5>
+<h1 style="text-align: center;">Update Signal</h1>
+<h4 style="text-align: center;">Writable Signal Value : {{writableSignalValue()}}</h4>
+<h4 style="text-align: center;">Computed Signal Value : {{computedSignalValue()}}</h4>
+<div style="display:flex;justify-content: center;text-align: center;">
+    <button (click)="updateWritableSignal()">Update Writable Signal</button>
+    <button (click)="updateComputedSignal()">Update Computed Signal</button>
+</div>
