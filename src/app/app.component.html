@@ -1,7 +1,7 @@
-<h1 style="text-align: center;">Update Signal</h1>
+<h1 style="text-align: center;">Signals in Angular</h1>
 <h4 style="text-align: center;">Writable Signal Value : {{writableSignalValue()}}</h4>
 <h4 style="text-align: center;">Computed Signal Value : {{computedSignalValue()}}</h4>
-<div style="display:flex;justify-content: center;text-align: center;">
-    <button (click)="updateWritableSignal()">Update Writable Signal</button>
-    <button (click)="updateComputedSignal()">Update Computed Signal</button>
+<h3 style="text-align: center;">Updating values through HTML</h3>
+<div style="display: flex;justify-content: center;text-align: center;">
+    <button (click)="writableSignalValue.set(500)">Update Value</button>
 </div>
