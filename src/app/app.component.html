@@ -1,7 +1,14 @@
-<h1 style="text-align: center;">Signals in Angular</h1>
-<h4 style="text-align: center;">Writable Signal Value : {{writableSignalValue()}}</h4>
-<h4 style="text-align: center;">Computed Signal Value : {{computedSignalValue()}}</h4>
-<h3 style="text-align: center;">Updating values through HTML</h3>
-<div style="display: flex;justify-content: center;text-align: center;">
-    <button (click)="writableSignalValue.set(500)">Update Value</button>
+<h1 style="text-align: center;">Effect in Signal</h1>
+<div class="centerData">
+    <div>
+        <p>Whenever signal is getting updated we will get that data in the effect</p>
+    </div>
+</div>
+<div class="centerData">
+    <div>
+        <h4>{{writableValue()}}</h4>
+    </div>
+</div>
+<div class="centerData">
+    <button (click)="callEffect()">Get Effect Data</button>
 </div>
