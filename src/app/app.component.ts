@@ -9,14 +9,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
 
-  writableValue: WritableSignal<number> = signal(100);
-
-  constructor() {
-    effect(() =>
-      console.log(this.writableValue()));
-  }
-
-  callEffect() {
-    this.writableValue.set(this.writableValue() + 1);
-  }
+  users = ['Vrutti', 'Shreya', 'Naimisha', 'Krupali'];
 }
