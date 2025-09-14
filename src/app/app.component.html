@@ -4,16 +4,16 @@
         <p>Variables available in for loop are called Contextual variables.</p>
     </div>
     <div>
-        <h3 style="color: brown;">$first</h3>
+        <h3 style="color: brown;">$last</h3>
     </div>
 </div>
 <div style="text-align: center;">
     @for(user of users; track user; let i = $index){
-        @if($first){
-            <h4 style="color: cadetblue;">{{i+1}} {{user}} </h4>
-        }
-        @else{
-            <h4>{{i+1}} {{user}} </h4>
-        }
+    @if($last){
+    <h4 style="color: cadetblue;">{{i+1}} {{user}} </h4>
+    }
+    @else{
+    <h4>{{i+1}} {{user}} </h4>
+    }
     }
 </div>
