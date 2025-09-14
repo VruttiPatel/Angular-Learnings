@@ -8,7 +8,7 @@
     </div>
 </div>
 <div style="text-align: center;">
-    @for(user of users; track user){
-    <h4> {{user}} </h4>
+    @for(user of users; track user; let i = $index){
+    <h4>{{i+1}} {{user}} </h4>
     }
 </div>
