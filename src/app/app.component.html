@@ -1,17 +1,6 @@
-<h1 style="text-align: center;">Contextual variables in Angular</h1>
+<h1 style="text-align: center;">Two way binding</h1>
+<p style="text-align: center;">Keeping HTML and TS variable in sync</p>
 <div style="text-align: center;">
-    <div>
-        <p>Variables available in for loop are called Contextual variables.</p>
-    </div>
-    <div>
-        <h3 style="color: brown;">empty</h3>
-    </div>
-</div>
-<div style="text-align: center;">
-    @for(user of users; track user; let i = $index;){
-    <h4>{{i+1}} {{user}} </h4>
-    }
-    @empty{
-    <h4>No users found</h4>
-    }
+    <input type="text" [(ngModel)]="name">
+    <h3>{{name}}</h3>
 </div>

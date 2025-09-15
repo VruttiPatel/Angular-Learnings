@@ -1,13 +1,14 @@
 import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['app.component.scss', 'common.component.scss']
 })
 export class AppComponent {
 
-  users = [];
+  name: string = "Vrutti";
 }
