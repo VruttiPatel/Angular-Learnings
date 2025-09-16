@@ -1,6 +1,18 @@
-<h1 style="text-align: center;">Two way binding</h1>
-<p style="text-align: center;">Keeping HTML and TS variable in sync</p>
+<h1 style="text-align: center;">To Do App</h1>
+<p style="text-align: center;">Track your day to day work</p>
 <div style="text-align: center;">
-    <input type="text" [(ngModel)]="name">
-    <h3>{{name}}</h3>
+    <input type="text" [(ngModel)]="task" placeholder="Enter your task">
+    <button (click)="saveTask(task)">Add task</button>
+</div>
+<div style="text-align: center;">
+    @for(task of tasks;track task){
+    <div style="text-align: center;">
+        <h4>{{task}}
+            <button (click)="deleteTask(task)">Delete Task</button>
+        </h4>
+    </div>
+    }
+    @empty{
+    <h4>No tasks found.</h4>
+    }
 </div>

@@ -10,5 +10,15 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
 
-  name: string = "Vrutti";
+  task: string = '';
+  tasks: string[] = [];
+
+  saveTask(task: string) {
+    this.tasks.push(task);
+    console.log(this.tasks);
+    this.task = '';
+  }
+  deleteTask(task: string) {
+    this.tasks = this.tasks.filter(t => t !== task);
+  }
 }
