@@ -14,11 +14,18 @@ export class AppComponent {
   tasks: string[] = [];
 
   saveTask(task: string) {
-    this.tasks.push(task);
-    console.log(this.tasks);
-    this.task = '';
+    if (this.tasks.includes(task)) {
+      alert("This task already exists.");
+    }
+    else {
+      this.tasks.push(task);
+      this.task = '';
+    }
   }
   deleteTask(task: string) {
     this.tasks = this.tasks.filter(t => t !== task);
+  }
+  viewTask(task: string) {
+    this.task = task;
   }
 }

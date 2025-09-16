@@ -8,6 +8,7 @@
     @for(task of tasks;track task){
     <div style="text-align: center;">
         <h4>{{task}}
+            <button (click)="viewTask(task)">View Task</button>
             <button (click)="deleteTask(task)">Delete Task</button>
         </h4>
     </div>
