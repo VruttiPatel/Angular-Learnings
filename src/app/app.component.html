@@ -1,19 +1,6 @@
-<h1 style="text-align: center;">To Do App</h1>
-<p style="text-align: center;">Track your day to day work</p>
-<div style="text-align: center;">
-    <input type="text" [(ngModel)]="task" placeholder="Enter your task">
-    <button (click)="saveTask(task)">Add task</button>
-</div>
-<div style="text-align: center;">
-    @for(task of tasks;track task){
-    <div style="text-align: center;">
-        <h4>{{task}}
-            <button (click)="viewTask(task)">View Task</button>
-            <button (click)="deleteTask(task)">Delete Task</button>
-        </h4>
-    </div>
-    }
-    @empty{
-    <h4>No tasks found.</h4>
-    }
+<h1 style="text-align: center;">Dynamic Styling</h1>
+<p style="text-align: center;">Styles passed through ts</p>
+<div [style.text-align]="textAlign">
+    <p>This is center aligned text</p>
+    <h2 [style.display]="visible ? displayProperty : none">{{msgToDisplay}}</h2>
 </div>

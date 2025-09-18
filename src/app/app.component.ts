@@ -10,22 +10,19 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
 
-  task: string = '';
-  tasks: string[] = [];
+  textAlign = "center";
+  visible = true;
+  displayProperty = '';
+  none = 'none';
+  msgToDisplay = '';
 
-  saveTask(task: string) {
-    if (this.tasks.includes(task)) {
-      alert("This task already exists.");
+  constructor() {
+    if (this.visible) {
+      this.msgToDisplay = "Visible property is true";
     }
     else {
-      this.tasks.push(task);
-      this.task = '';
+      this.msgToDisplay = "Visible property is false";
     }
-  }
-  deleteTask(task: string) {
-    this.tasks = this.tasks.filter(t => t !== task);
-  }
-  viewTask(task: string) {
-    this.task = task;
+
   }
 }
