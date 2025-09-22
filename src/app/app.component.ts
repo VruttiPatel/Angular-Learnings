@@ -10,19 +10,4 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
 
-  textAlign = "center";
-  visible = true;
-  displayProperty = '';
-  none = 'none';
-  msgToDisplay = '';
-
-  constructor() {
-    if (this.visible) {
-      this.msgToDisplay = "Visible property is true";
-    }
-    else {
-      this.msgToDisplay = "Visible property is false";
-    }
-
-  }
 }
