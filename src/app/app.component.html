@@ -1,10 +1,6 @@
-<h1 style="text-align: center;">Directives</h1>
+<h1 style="text-align: center;">*ngFor</h1>
 <div class="centerAlign">
-    <p>Javascript class that helps to add additional behaviour to our HTML.</p>
-    <p>There are 3 types of directives in Angular.</p>
+    <p *ngFor="let student of students">
+        {{student}}
+    </p>
 </div>
-<ol style="text-align: center;list-style-position: inside;">
-    <li class="listStyle">Component Directives - Used in component template file</li>
-    <li class="listStyle">Structural Directives - Manipulates DOM by adding, removing, or manipulating elements</li>
-    <li class="listStyle">Attribute Directives - Modify the appearance of the existing element</li>
-</ol>
