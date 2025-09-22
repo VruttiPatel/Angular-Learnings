@@ -11,6 +11,14 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
 
-  students: string[] = ['Vrutti', 'Jahanvi', 'Shreya'];
-
+  items = [
+    {
+      item: 'cloth',
+      use: ['wear', 'clean']
+    },
+    {
+      item: 'bike',
+      use: ['ride', 'transport']
+    }
+  ];
 }

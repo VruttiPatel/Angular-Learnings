@@ -1,6 +1,13 @@
-<h1 style="text-align: center;">*ngFor</h1>
+<h1 style="text-align: center;">Nested *ngFor</h1>
 <div class="centerAlign">
-    <p *ngFor="let student of students">
-        {{student}}
-    </p>
+    <div *ngFor="let item of items">
+        <p>{{item.item}}</p>
+        <ul style="list-style-position: inside;">
+            <li *ngFor="let use of item.use">
+                {{use}}
+            </li>
+        </ul>
+    </div>
 </div>
+
+<h4 class="centerAlign">Note: p tag won't iterate as expected. Try to use div.</h4>
